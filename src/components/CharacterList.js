@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Row, Button } from "reactstrap";
 import CharacterCard from './CharacterCard';
-
+import SearchForm from './SearchForm';
 
 function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -45,14 +45,16 @@ function CharacterList() {
       return charactersList;
     }
 
-   
+  
   }
 
   return (
     <section className="character-list">
     <div>
       
-      
+      { characters !== '' &&
+       <SearchForm characters={characters} setFilterCharacters={setFilterCharacters}  />
+      }
        <Container>
        <Row>
         {showCharacters()}
