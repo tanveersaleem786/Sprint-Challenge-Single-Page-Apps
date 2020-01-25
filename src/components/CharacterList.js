@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Row, Button } from "reactstrap";
+
 import CharacterCard from './CharacterCard';
 import SearchForm from './SearchForm';
 
@@ -45,17 +46,33 @@ function CharacterList() {
       return charactersList;
     }
 
-  
+    nextCharacters = () => {
+      if(characters.info.next !== '') {
+        charactersApi(characters.info.next);
+      }
+    }
+
+    previousCharacters = () => {
+      if(characters.info.prev !== '') {
+        charactersApi(characters.info.prev);
+      }
+    }
   }
 
   return (
     <section className="character-list">
     <div>
-      
+      <div className="pagging">
+        <Button  className="button" onClick={previousCharacters}>Prvious</Button>{'   '} 
+        <Button className="button" onClick={nextCharacters}>Next</Button>   
+        <div>
+     
+    </div>          
+      </div>
       { characters !== '' &&
        <SearchForm characters={characters} setFilterCharacters={setFilterCharacters}  />
       }
-       <Container>
+       <Container>       
        <Row>
         {showCharacters()}
        </Row>

@@ -16,7 +16,7 @@ function SearchForm({characters, setFilterCharacters}) {
  
   return (
     <section className="search-form">
-     <h1>Filter by Name</h1>
+     <h1 className="searchTxt">Filter By Name</h1>
       <input
         type="text"
         placeholder="Start typing here to see the magic happen!"

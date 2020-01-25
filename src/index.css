@@ -88,3 +88,36 @@ header h1 {
 .card-img-top {
   margin-top: 5px;
 }
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.pagging {
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+}
+
+input[type=text] {
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.searchTxt {
+  font-weight: bold;
+  font-size: 2rem;
+}
